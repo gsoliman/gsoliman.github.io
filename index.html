@@ -7,10 +7,19 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <link rel="import" href="gsoliman.github.io/navbar.html">
+ <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+
+
 </head>
 <body>
 
+ <div id="nav-placeholder"></div>
+  <script>
+$(function(){
+  $("#nav-placeholder").load("gsoliman.github.io/navbar.html");
+});
+</script>
+  
 <div class="jumbotron">
   <div class="container text-center">
     <h1>My </h1>      
