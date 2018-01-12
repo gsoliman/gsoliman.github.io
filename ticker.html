@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+</head>
+  
+  
+<style>@-webkit-keyframes ticker {
+  0% {
+    -webkit-transform: translate3d(.5%, 0, 0);
+    transform: translate3d(.5%, 0, 0);
+    visibility: visible;
+  }
+  100% {
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+  }
+}
+@keyframes ticker {
+  0% {
+    -webkit-transform: translate3d(.5%, 0, 0);
+    transform: translate3d(.5%, 0, 0);
+    visibility: visible;
+  }
+  100% {
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+  }
+}
+.ticker-wrap {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  height: 4rem;
+  background-color: rgba(0, 0, 0, 0.9); <!--Color of the background behind the text in the ticker, set to "transparent" if no color behind text wanted-->
+  padding-left: 100%;
+}
+
+.ticker {
+  display: inline-block;
+  height: 4rem;
+  line-height: 4rem;
+  white-space: nowrap;
+  padding-right: 100%;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  -webkit-animation-name: ticker;
+  animation-name: ticker;
+  -webkit-animation-duration: 1000s;
+  animation-duration: 1000s;
+}
+.ticker__item {
+  display: inline-block;
+  padding: 0 2rem;
+  font-size: 2rem;
+  color: white;
+}
+
+body {
+  padding-bottom: 5rem;
+}
+
+h1, h2, p {
+  padding: 0 5%;
+}
+</style>
+<script>
+
+function toggle(){
+var playButton = document.getElementById("playButton");
+var pauseButton = document.getElementById("pauseButton"); 
+ if (playButton.style.display === "none") {
+        playButton.style.display = "inline";
+        document.getElementById("creditsAnimated").style.animationPlayState="Paused";
+    } else {
+        playButton.style.display = "none";
+       document.getElementById("creditsAnimated").style.animationPlayState="Running";
+
+    }
+if (pauseButton.style.display === "none") {
+        pauseButton.style.display = "inline";
+    } else {
+        pauseButton.style.display = "none";
+    }
+
+}
+
+</script>
+
+
+
+
+  
+  
+ 
+  <div class="give-overview"> <p>The Honors College recognizes alumni and friends who have generously given to ensure the continued success of the programs and initiatives.<br /> Support from our&nbsp;alumni, parents, and friends is gratefully acknowledged. Thank&nbsp;you, everyone!</p> </div> 
+ <div class="ticker-wrap">
+<div class="ticker" id="creditsAnimated">
+  <div class="ticker__item">Dana M. Abbott, UCNB&#39;10 ★ Professor John W. Adams, RC&#39;65 ★ <span class="give-student">Sarah Ahmed</span> ★ <span class="give-student">Kyle Aitken</span> ★ <span class="give-student">Farhat Alam</span> ★ <span class="give-student">Josephine Alegun</span> ★ <span class="give-student">Emily Ali</span> ★ <span class="give- student">Swetcha Ananthu</span> ★ Mark Angelson ★ Maria Arceo ★ <span class="give- student">Vishal Ardeshna</span> ★ <span class="give-student">Amnon Attali</span> ★ <span class="give-student">Averie Auten</span> ★ <span class="give-student">Tyra Aversa</span> ★ <span class="give-student">Kathryn Badger</span> ★ <span class="give- student">Aditi Badrinath</span> ★ <span class="give-student">Bisma Baloch</span> ★ Dr. Robert L. Barchi ★ Dr. Jonathan J. Barker, RC&#39;04 ★ <span class="give-student">Bogdana Bartkiv</span> ★ <span class="give-student">Christiaan Bedrij-Arpa</span> ★ James Behrens ★ Elysha D. Bembury ★ <span class="give-student">Sophie Benaroya</span> ★ Daphne Benderly ★ Anand B. Bhagwat, GSNB&#39;92, RBSG&#39;96 ★ Julie M. Bianchini, SAS&#39;10 ★ David J. Boczar, RC&#39;81 ★ <span class="give-student">Nicholas Brennan</span> ★ <span class="give-student">Ben Brik</span> ★ <span class="give-student">Lejandro Bruce</span> ★ <span class="give-student">Hannah Calvelli</span> ★ Robert J. Campel, RC&#39;61 ★ <span class="give-student">Hannah Canonigo</span> ★ <span class="give- student">Nicholas Capuano</span> ★ <span class="give-student">Thalia Castro</span> ★ <span class="give-student">Samantha Chang</span> ★ <span class="give-student">Sadhana Chidambaran</span> ★<span class="give-student">Jack Chiu</span> ★ Hilary Cohen ★ Kendall J. Collins, Esq., RC&#39;94, CLAW&#39;97 ★ <span class="give-student">Hannah Consiglio</span> ★ <span class="give-student">Emily Conway</span> ★ Kevin Conway ★ <span class="give-student">Christopher Cote</span> ★ <span class="give-student">Jean Cote</span> ★ <span class="give-student">Evelyn Daly-Forseth</span> ★ <span class="give- student">Davian David-Ramphal</span> ★ <span class="give-student">Peter Davis</span> ★ <span class="give-student">Azra Dees</span> ★ <span class="give-student">Puja Deshpande</span> ★ <span class="give-student">Bharati Dev</span> ★ Brandon Diaz-Abreu, SAS&#39;17 ★ <span class="give-student">Cathy Dixon-Brown</span> ★ <span class="give- student">Delaney Dollard</span> ★ Dr. James F. Dougherty, RC&#39;74, GSNB&#39;75 ★ <span class="give-student">William Dreyer</span> ★ Monica Driscoll, DC&#39;79 ★ <span class="give-student">Samantha Drummond</span> ★ Robert A. Druskin, RC&#39;69 ★ <span class="give-student">Lydia Dunn</span> ★ <span class="give-student">Alana Easterbrook</span> ★ <span class="give-student">Mahmoud Emara</span> ★ Kenneth K. Engelhart, RC&#39;70 ★ <span class="give-student">Hyun Jin Eo</span> ★ <span class="give- student">Carola Esterbrook</span> ★ <span class="give-student">Katherine Fafara</span> ★ <span class="give-student">Huafeng Fan</span> ★ <span class="give-student">Linda Farag</span> ★ Avram (Avi) S. Fechter, RC&#39;02, EJBG&#39;03 ★ <span class="give- student">Daniel Ferioli</span> ★ <span class="give-student">Simran Fernandez</span> ★ <span class="give-student">Steven Ferrante</span> ★ Kristen Ferris, SAS&#39;15 ★ Bethany M. Fisher, LC&#39;08 ★ <span class="give-student">Parker Fisher</span> ★ <span class="give-student">Lance Fletcher</span> ★ <span class="give-student">Alon Flor</span> ★ <span class="give-student">Tiffany Fong</span> ★ <span class="give-student">Christina Forrester</span> ★ Charles R. Foy, RC&#39;76, GSN&#39;02, GSNB&#39;08 ★ Michael G. Franzoi, LC&#39;07 ★ <span class="give-student">Maggy Fread</span> ★ Michael J. Fuerstman, RC&#39;01 ★ <span class="give-student">Alfonse Gaite</span> ★ <span class="give-student">Heman Gandhi</span> ★ Rachelle G. Gandica, M.D., RC&#39;00 ★ <span class="give-student">Micah Gartenberg</span> ★ Peter Ross Gilbert, RC&#39;87, RBSG&#39;95 ★ Paul Gilmore ★ <span class="give-student">Eric Giovannini</span> ★ <span class="give-student">Amy Gladstein</span> ★ <span class="give-student">Christopher Gong</span> ★ Jack Greenberg ★ <span class="give-student">Kathy Greenberg</span> ★ Michael A. Guariglia, Esq., RC&#39;75, CLAW&#39;78 ★ <span class="give-student">Rumita Gupta</span> ★ <span class="give-student">Pranay Gupta</span> ★ Jacqueline M. Guscott, RC&#39;07 ★ Allan S. Gutfleish, Esq., RC&#39;52 ★ Curt H. Hagedorn, M.D., RC&#39;72, RWJMS&#39;74 ★ <span class="give-student">Millie Hakim</span> ★ <span class="give- student">Justin Hall</span> ★ Dwight N. Halpern, M.D., RC&#39;52 <span class="give- student">Jesica Han</span> ★ <span class="give-student">Andrew Hanna</span> ★ Kathleen Hansalik ★ <span class="give-student">Joseph Haverlock</span> ★ Thomas E. Helbig, MD, RC&#39;77, NJMS&#39;81 ★ Ivy Hoberman ★ <span class="give-student">Alexis Holmes</span> ★ Daniel W. Horchler, RC&#39;80, RBSG&#39;81 ★ <span class="give- student">Amy Hu</span> ★ <span class="give-student">Sophia Huang</span> ★ <span class="give-student">Jean- Pierre Jacob</span> ★ <span class="give-student">Joseph Jacobs</span> ★ <span class="give-student">Rachel John</span> ★ <span class="give- student">Faith Johnson</span> ★ <span class="give-student">Sabrina Jordan</span> ★ <span class="give-student">Mateo Juliani</span> ★ <span class="give-student">Mythili Kanagala</span> ★ <span class="give-student">Christina Kanagawa</span> ★ <span class="give-student">Raval Kanchi</span> ★ <span class="give-student">Jieun Kang</span> ★ <span class="give-student">Priti Kantesaria</span> ★ <span class="give-student">Paul Kapp</span> ★ <span class="give-student">Eshan Kaul</span> ★ <span class="give- student">Carly Kenselaar</span> ★ <span class="give-student">Purva Khanapure</span> ★ <span class="give-student">Chandni Khawaja</span> ★ <span class="give-student">Lawrence Klein</span> ★ Krista M. Klein, RC&#39;08 ★ <span class="give-student">Monique Klitbo</span> ★ <span class="give-student">Nicholas Kobol</span> ★ Christopher J. Koke, RC&#39;90 ★ Anne E. Korn, UCNB&#39;98 ★ <span class="give-student">Rithika Korrapolu</span> ★ Stephanie Kose ★ Beth Schuldiner Kotek, RC&#39;77 ★ <span class="give-student">Caroline Kratka</span> ★ <span class="give-student">Jeremy Kritz</span> ★ <span class="give-student">Danielle Kulyk</span> ★ <span class="give- student">Ansley Kunnath</span> ★ <span class="give-student">Mikio Lacapra</span> ★ Joshua H. Landes, RC&#39;84 ★ <span class="give-student">Charles Lawrence</span> ★ <span class="give-student">Esther Leaming</span> ★ <span class="give-student">Amanda Lee</span> ★ <span class="give-student">Thomas Leeds</span> ★ <span class="give- student">Michael Leonardis</span> ★ Robert H. Levan, RC&#39;52 ★ <span class="give- student">Congyuan Li</span> ★ <span class="give-student">Alexandra Lilly</span> ★ <span class="give-student">Tiffany Lin</span> ★ <span class="give-student">Riley Link</span> ★ <span class="give-student">Nicholas Lobosco</span> ★ <span class="give-student">Beverly Maddalone</span> ★ <span class="give-student">Anisha Mahat</span> ★ <span class="give- student">Jeremy Mahr</span> ★ <span class="give-student">Linh Mai</span> ★ <span class="give-student">Phoebe Mak</span> ★ <span class="give-student">Jillian Maling</span> ★ Patrick P. Maloney, RC&#39;75 ★ <span class="give-student">Miranda McKiernan</span> ★ <span class="give-student">Collin McManus</span> ★ <span class="give-student">Paina Mehta</span> ★ <span class="give-student">Gabrielle Mejia</span> ★ <span class="give- student">Anita Michalak</span> ★ Lauren W. Miller, SAS&#39;11 ★ <span class="give- student">Anurag Modak</span> ★ <span class="give-student">Rianna Modi</span> ★ <span class="give-student">Michael Mosquera</span> ★ Deborah Chan Moy, RC&#39;92 ★ Anoop M. Nambiar, M.D., RC&#39;99, NJMS&#39;03 ★ <span class="give-student">Michael Nanchanatt</span> ★ <span class="give-student">Asraar Naseer</span> ★ Weyni A. Nazon, RBSG&#39;15 ★ <span class="give-student">Mamadou Ndiaye</span> ★ Howard L. Needleman, D.M.D., RC&#39;68 ★ Bonnie Newell ★ Mirela Ngjela, RBSG&#39;01 ★ <span class="give-student">Kimberly Nguyen</span> ★ <span class="give-student">April Nicklaus</span> ★ <span class="give-student">Haralambos Nicolaou</span> ★ Paul M. Nitzsche, RBSG&#39;97 ★ <span class="give-student">Michael Nitzsche</span> ★ <span class="give-student">Rose Nixon</span> ★ <span class="give-student">Robert Norton</span> ★ <span class="give-student">Connor O&#39;Brien</span> ★ Roberta F. O&#39;Hara, RC&#39;84 ★ <span class="give-student">Nanaama O&#39;Hene</span> ★ Kevin J. O&#39;Keefe, LC&#39;05 ★ Jessica Oakhem ★ <span class="give-student">Oluwatobi Odusola</span> ★ <span class="give-student">Andrew Olsen</span> ★ <span class="give- student">Cynthia Onuoha</span> ★ <span class="give-student">Terese Osborne</span> ★ <span class="give-student">Victoria Osorio</span> ★ <span class="give-student">Yuki Osumi</span> ★ Laura Padersky ★ <span class="give-student">Karthik Paka</span> ★ <span class="give-student">Meher Pandher</span> ★ <span class="give-student">Namrata Pandya</span> ★ <span class="give-student">Yesha Parekh</span> ★ Henah Parikh, SAS&#39;13 ★ Mia Christine Park, RC&#39;87 ★ Seungkyu Park ★ <span class="give- student">Kathleen Parrish</span> ★ Houshang L. Parsa, RC&#39;80 ★ <span class="give- student">Harsh Patel</span> ★ <span class="give-student">Vishal Patel</span> ★ <span class="give-student">Shyam Patel</span> ★ <span class="give-student">Daniel Pattathil</span> ★ David Michael Paul, RC&#39;73 ★ <span class="give-student">Paisley Payne</span> ★ <span class="give-student">Jasmine Pegrem</span> ★ Tammy Pegrem ★ Nicholas F. Pellitta, Esq., RC&#39;82 ★ <span class="give-student">Nicholas Pellitta</span> ★ Susan M. Petroulas, RC&#39;84 ★ <span class="give-student">Raji Pillai</span> ★ Dr. Vincenza A. Piscitelli, RC&#39;92 ★ <span class="give-student">Alec Pizarro</span> ★ <span class="give-student">Sarah Pomeranz</span> ★ <span class="give-student">Paulina Portnoy</span> ★ <span class="give-student">Anthony Portuese</span> ★ <span class="give- student">Mary Powley</span> ★ Rajiv Prasad, RC&#39;92 ★ David W. Price, M.D., RC&#39;81, RWJMS&#39;85 ★ Thomas J. Prusa ★ Darlene Matrisian Ragoonanan, RC&#39;92 ★ Prabhu Rajagopalan ★ <span class="give-student">Srinivas Rajagopalan</span> ★ <span class="give-student">Avina Rami</span> ★ <span class="give-student">Ruanne Ramotar</span> ★ <span class="give-student">Friya Randelia</span> ★ Janine Randolph ★ <span class="give-student">Shivani Rao</span> ★ Dr. John R. Raykovitz <span class="give- student">Janelle Raymundo</span> ★ Lauren Redfern ★ Sanford E. Retsky, RC&#39;70 ★ <span class="give-student">Ali Riad</span> ★ Nadeem Riaz, RC&#39;03 ★ Lori A. Riley, SCILS&#39;04, RC&#39;04 ★ Tammeca E. Riley, COOK&#39;94 ★ <span class="give- student">Michael Rizzo</span> ★ <span class="give-student">Maya Robles</span> ★ <span class="give-student">Jessica Rojas</span> ★ <span class="give-student">Jason Rosenthal</span> ★ Amy S. Rosenthal, GSNB&#39;96 ★ Yair Rosenthal ★ <span class="give- student">Mathilde Roux</span> ★ <span class="give-student">Lawrence Ruff</span> ★ Tracy Russell, RC&#39;05 ★ Andrea C. Rydel, RC&#39;09 ★ <span class="give-student">Nisha S. Shankar</span> ★ <span class="give-student">Shubham Sabnani</span> ★ <span class="give- student">Ryan Sadofsky</span> ★ Harjinder S. Saini, M.D., COOK&#39;91, RWJMS&#39;95 ★ <span class="give-student">Adiba Salim</span> ★ <span class="give-student">Robert Salter</span> ★ <span class="give-student">Sophia Samuel</span> ★ <span class="give- student">Kaitlyn San Miguel</span> ★ <span class="give-student">Sohum Sanghvi</span> ★ <span class="give-student">Sujaan Sanghvi</span> ★ <span class="give-student">Michael Sangobiyi</span> ★ Lynne M. Santaniello, RC&#39;80 ★ <span class="give-student">Arkarsh Sardana</span> ★ D.G. Peter Sarsfield, RC&#39;84 ★ <span class="give-student">Nicole Savio</span> ★ Donna Jiorle Schaare, DC&#39;82 ★ <span class="give-student">Joshua Schaeffer</span> ★ <span class="give-student">James Schappert</span> ★ Michael S. Schmelzer, LC&#39;96, RBSNB&#39;96, RBSG&#39;98 ★ <span class="give-student">Julia Schoeni</span> ★ <span class="give-student">Marissa Schwartz</span> ★ Laura Frances Sclafani, RC&#39;06, GSED&#39;15 ★ Laurel Seese ★ <span class="give-student">Dimpie Shah</span> ★ <span class="give-student">Mansi Shah</span> ★ <span class="give- student">Johnny Shamir</span> ★ <span class="give-student">Nisha S. Shankar</span> ★ <span class="give-student">Patricia Shelton</span> ★ <span class="give-student">David Shi</span> ★ Mark Shinn ★ <span class="give-student">Shreya Shirodkar</span> ★ Assad K. Siddiqi, RC&#39;98 ★ <span class="give-student">Christina Signore</span> ★ Henry G. Singer, COOK&#39;83 ★ Joann Singer ★ <span class="give-student">Shashwat Singh</span> ★ <span class="give-student">Neelan Sivaneri</span> ★ <span class="give-student">Kathryn Slusarczyk</span> ★ Eileen M. Smith, DC&#39;83, RBSG&#39;91, SC&amp;I&#39;09 ★ <span class="give-student">Samuel Snyder</span> ★ Rahul Sondhi, RC&#39;90 ★ <span class="give- student">Jonathan St. Ange</span> ★ <span class="give-student">Saraann Stanway</span> ★ <span class="give-student">Christopher Stephen</span> ★ John M. Strampfer, RC&#39;72 ★ <span class="give-student">Marimar Suarez</span> ★ <span class="give-student">Advait Suvarnakar</span> ★ Amish Talwar, M.D., RC&#39;07 ★ <span class="give-student">Rae Tarapore</span> ★ Steven H. Temares, RC&#39;80 ★ Barbara E. Teubner, DC&#39;95 ★ <span class="give-student">David Tian</span> ★ James E. Tierney, RC&#39;78 ★ <span class="give-student">Sarah Trackman</span> ★ <span class="give-student">Gary Trainor</span> ★ Laura Tremper-Jones, WHNP-C, RC&#39;85 ★ <span class="give- student">Jonathan Tsai</span> ★ <span class="give-student">Anna Tsatsos</span> ★ <span class="give-student">Lisa Tsinis</span> ★ <span class="give-student">Stephanie Tu</span> ★ <span class="give-student">Mary Twaddle</span> ★ Donna Velentino ★ <span class="give- student">Krishna Varre</span> ★ Maya N. Vaughan-Smith, RC&#39;98 ★ <span class="give- student">Amar Venugopal</span> ★ <span class="give-student">Alec Vidal</span> ★ <span class="give-student">Gary Vigilante</span> ★ <span class="give-student">Michael Vinciguerra</span> ★ Matthew J. Walker, RC&#39;86 ★ Peter C. Warman, RC&#39;89 ★ Bernard M. Weisenfeld, RC&#39;66 ★ <span class="give-student">Aliya Williams</span> ★ <span class="give-student">William Wilson</span> ★ <span class="give-student">Richard Wilson</span> ★ Jennifer Wilson ★ <span class="give-student">Gabrielle Wilson</span> ★ <span class="give-student">Maxwell Witkowski</span> ★ <span class="give-student">Emily Woods</span> ★ <span class="give-student">Luana Xu</span> ★ Surya B. Yalamanchili, RBSNB&#39;03, RC&#39;03 ★ Jing Yang ★ <span class="give-student">Tiffany Yang</span> ★ <span class="give-student">Stephen Yee</span> ★ Shrutika S. Yeola, SAS&#39;13 ★ <span class="give-student">Emily Yi</span> ★ Steve York, UCNB&#39;87 ★ Donel Young ★ <span class="give-student">Megan Yuen</span> ★ <span class="give-student">Tanner Yuhas</span> ★ Krista K. Yuhas, RC&#39;91 ★ <span class="give-student">Gali Zaborowski</span> ★ <span class="give-student">Melanie Zheng</span> ★ <span class="give-student">Michael Zlatin</span> ★ Brenda Zlatin ★</div>
+  
+  </div>
+</div>
+
+<div>
+      <button style="display: none" id="playButton" type="button" class="btn btn-default btn-xs" onclick="toggle();">
+          <span class="glyphicon glyphicon-play"></span>
+       </button>
+      <button id="pauseButton" type="button" class="btn btn-default btn-xs" onclick="toggle();">
+          <span class="glyphicon glyphicon-pause"></span>
+      </button>
+      <!--<button id="fastForward" type="button" class="btn btn-default btn-xs" onclick="fastForward();">
+          <span class="glyphicon glyphicon-forward"></span>
+      </button>
+      <button style="display: none" id="regularPace" type="button" class="btn btn-default btn-xs" onclick="fastForward();">
+          <span class="glyphicon glyphicon-backward"></span>
+      </button>-->
+      
+  </div>
+  
+  <p>&nbsp;</p> <ul class="donor-bullet"> <li type="square"><span>HC Student Donor</span></li> </ul>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+</html>
