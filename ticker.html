@@ -71,7 +71,7 @@ h1, h2, p {
 
 function loader(){
 var x = getCookie("tickerNextPosition");
-if (x === ""){
+if (x === "none"){
 document.cookie = "tickerNextPosition=replace25Percent";
 }
 else if(x === "replace25Percent"){
@@ -82,6 +82,11 @@ else if(x === "replace50Percent"){
 document.getElementsByClassName("ticker__item")[0].innerHTML = replace50Percent;
 document.cookie = "tickerNextPosition=replace75Percent";
 }
+else if(x === "replace75Percent"){
+document.getElementsByClassName("ticker__item")[0].innerHTML = replace75Percent;
+document.cookie = "tickerNextPosition=none";
+}
+
 }
 
 
@@ -151,7 +156,7 @@ function getCookie(cname) {
             return c.substring(name.length, c.length);
         }
     }
-    return "";
+    return "none";
 }
 
 
