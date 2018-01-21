@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -70,7 +71,7 @@ h1, h2, p {
 
 //Function that runs when page is loaded so the div can be created already
 //checks if cookie to see where the postion of ticker has value, if not sets a value
-function loader(){
+window.onload = function loader(){
 var x = getCookie("tickerNextPosition");
 if (x === "none"){
 document.cookie = "tickerNextPosition=replace25Percent";
@@ -91,51 +92,6 @@ document.cookie = "tickerNextPosition=none";
 }
 
 
-
-
-
-//Play and Pause
-function toggle(){
-var playButton = document.getElementById("playButton");
-var pauseButton = document.getElementById("pauseButton"); 
- if (playButton.style.display === "none") {
-        playButton.style.display = "inline";
-        document.getElementById("creditsAnimated").style.animationPlayState="Paused";
-    } else {
-        playButton.style.display = "none";
-       document.getElementById("creditsAnimated").style.animationPlayState="Running";
-
-    }
-if (pauseButton.style.display === "none") {
-        pauseButton.style.display = "inline";
-    } else {
-        pauseButton.style.display = "none";
-    }
-
-}
-
-
-//Fast forward and return to regular pace
-function fastForward(){
-var fastButton = document.getElementById("fastForward");
-var slowButton = document.getElementById("regularPace"); 
-
-if (fastButton.style.display === "none") {
-        fastButton.style.display = "inline";
-    } else {
-        fastButton.style.display = "none";
-    }
-if (slowButton.style.display === "none") {
-        slowButton.style.display = "inline";
-        document.getElementById("creditsAnimated").style.animationDuration = "200s";
-
-    } else {
-        slowButton.style.display = "none";
-        document.getElementById("creditsAnimated").style.animationDuration = "1000s";
-
-    }
-
-}
 
 
 // Used to make the new string with escape characters document.getElementsByClassName("ticker__item")[0].innerHTML.replace("\"", "\\\"")
@@ -164,7 +120,7 @@ function getCookie(cookieName) {
 </script>
 
 
-<body onload="loader();">
+<body>
 
   <div class="give-overview"> <p>The Honors College recognizes alumni and friends who have generously given to ensure the continued success of the programs and initiatives.<br /> Support from our&nbsp;alumni, parents, and friends is gratefully acknowledged. Thank&nbsp;you, everyone!</p> </div> 
  <div class="ticker-wrap">
@@ -174,21 +130,6 @@ function getCookie(cookieName) {
   </div>
 </div>
 
-<div>
-      <button style="display: none" id="playButton" type="button" class="btn btn-default btn-xs" onclick="toggle();">
-          <span class="glyphicon glyphicon-play"></span>
-       </button>
-      <button id="pauseButton" type="button" class="btn btn-default btn-xs" onclick="toggle();">
-          <span class="glyphicon glyphicon-pause"></span>
-      </button>
-      <button id="fastForward" type="button" class="btn btn-default btn-xs" onclick="fastForward();">
-          <span class="glyphicon glyphicon-forward"></span>
-      </button>
-      <button style="display: none" id="regularPace" type="button" class="btn btn-default btn-xs" onclick="fastForward();">
-          <span class="glyphicon glyphicon-backward"></span>
-      </button>
-      
-  </div>
   
   <p>&nbsp;</p> <ul class="donor-bullet"> <li type="square"><span>HC Student Donor</span></li> </ul>
 
