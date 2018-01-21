@@ -72,7 +72,6 @@ h1, h2, p {
 //Function that runs when page is loaded so the div can be created already
 //checks if cookie to see where the postion of ticker has value, if not sets a value
 window.onload = function loader(){
-console.log(11);
 var x = getCookie("tickerNextPosition");
 if (x === "none"){
 document.cookie = "tickerNextPosition=replace25Percent";
@@ -84,13 +83,13 @@ document.getElementsByClassName("ticker__item")[0].innerHTML = replace;
 document.cookie = "tickerNextPosition=replace50Percent";
 }
 else if(x === "replace50Percent"){
-var startIndex = document.getElementsByClassName("ticker__item")[0].innerHTML.indexOf("★", 3741) + 2;
+var startIndex = document.getElementsByClassName("ticker__item")[0].innerHTML.indexOf("★", 7485) + 2;
 var replace = document.getElementsByClassName("ticker__item")[0].innerHTML.substring(startIndex) + document.getElementsByClassName("ticker__item")[0].innerHTML.substring(0, startIndex-1);
 document.getElementsByClassName("ticker__item")[0].innerHTML = replace;
 document.cookie = "tickerNextPosition=replace75Percent";
 }
 else if(x === "replace75Percent"){
-var startIndex = document.getElementsByClassName("ticker__item")[0].innerHTML.indexOf("★", 3741) + 2;
+var startIndex = document.getElementsByClassName("ticker__item")[0].innerHTML.indexOf("★", 11225) + 2;
 var replace = document.getElementsByClassName("ticker__item")[0].innerHTML.substring(startIndex) + document.getElementsByClassName("ticker__item")[0].innerHTML.substring(0, startIndex-1);
 document.getElementsByClassName("ticker__item")[0].innerHTML = replace;
 document.cookie = "tickerNextPosition=none";
