@@ -72,6 +72,7 @@ h1, h2, p {
 //Function that runs when page is loaded so the div can be created already
 //checks if cookie to see where the postion of ticker has value, if not sets a value
 window.onload = function loader(){
+ console.log(document.getElementsByClassName("ticker__item")[0].innerHTML.substring(3758+2,3770));
 var x = getCookie("tickerNextPosition");
 if (x === "none"){
 document.cookie = "tickerNextPosition=replace25Percent";
